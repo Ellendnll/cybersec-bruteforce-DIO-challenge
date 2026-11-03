@@ -28,7 +28,7 @@ nmap -Pn -O 10.64.131.169
 
 
 **Resultado:**
-\`\`\`
+
 PORT     STATE SERVICE
 21/tcp   open  ftp
 22/tcp   open  ssh
@@ -36,7 +36,7 @@ PORT     STATE SERVICE
 445/tcp  open  microsoft-ds
 3128/tcp open  squid-http
 3333/tcp open  dec-notes
-\`\`\`
+
 
 A porta **3333** chamou atenção por ser um serviço HTTP não padrão —
 foi o alvo da enumeração web a seguir.
